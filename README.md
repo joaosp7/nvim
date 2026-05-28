@@ -9,3 +9,4 @@ Plugins installed (as of 2026-05-28):
 - cmp
 - telescope
 - treesitter
+- neo-tree
