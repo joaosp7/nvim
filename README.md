@@ -10,3 +10,4 @@ Plugins installed (as of 2026-05-28):
 - telescope
 - treesitter
 - neo-tree
+- terminal view
