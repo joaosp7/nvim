@@ -16,6 +16,8 @@ return {
           "bash",
           "markdown",
           "markdown_inline",
+          "go",
+          "python"
         },
         highlight = {
           enable = true,
