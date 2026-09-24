@@ -17,7 +17,9 @@ return {
           "markdown",
           "markdown_inline",
           "go",
-          "python"
+          "python",
+          "rust",
+          "tsx"
         },
         highlight = {
           enable = true,
