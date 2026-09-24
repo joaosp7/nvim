@@ -22,4 +22,5 @@ require("lazy").setup({
   { import = "plugins.neo-tree" },
   { import = "plugins.terminal" },
   { import = "plugins.auto-save" },
+  { import = "plugins.git" },
 })
