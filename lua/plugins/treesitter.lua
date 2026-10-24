@@ -19,7 +19,9 @@ return {
           "go",
           "python",
           "rust",
-          "tsx"
+          "tsx",
+          "c",
+          "cpp",
         },
         highlight = {
           enable = true,

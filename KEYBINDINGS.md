@@ -49,6 +49,7 @@ Estes atalhos são ativados somente quando existe um LSP conectado ao buffer.
 | N | `<leader>ld` | Mostrar diagnóstico na posição |
 | N | `[d` | Diagnóstico anterior |
 | N | `]d` | Próximo diagnóstico |
+| N | `<leader>sh` | Alternar entre fonte e header (C/C++, somente com `clangd`) |
 
 ## nvim-cmp
 

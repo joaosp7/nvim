@@ -10,7 +10,7 @@ A configuração é mantida de forma simples e modular, com opções, atalhos e 
 - **Tema:** Edge
 - **Busca:** Telescope
 - **Syntax highlighting:** Tree-sitter
-- **LSP:** Lua, Go, Rust, Python, JavaScript, TypeScript e TSX
+- **LSP:** Lua, Go, Rust, Python, JavaScript, TypeScript, TSX, C e C++
 - **Autocomplete:** nvim-cmp integrado ao LSP
 - **Explorador de arquivos:** Neo-tree
 - **Terminal:** Toggleterm
@@ -34,6 +34,8 @@ Configurado para:
 - Go
 - Python
 - Rust
+- C
+- C++
 
 ### LSP
 
@@ -44,8 +46,15 @@ Os servidores configurados são instalados e gerenciados pelo Mason:
 - `rust_analyzer`
 - `basedpyright`
 - `ts_ls`
+- `clangd`
 
-O `ts_ls` atende JavaScript, TypeScript e TSX.
+O `ts_ls` atende JavaScript, TypeScript e TSX. O `clangd` atende C e C++.
+
+O `clangd` usa `compile_commands.json` na raiz do projeto. Se o arquivo estiver em um diretório de build, crie um link na raiz:
+
+```bash
+ln -s build/compile_commands.json .
+```
 
 ## Atalhos
 

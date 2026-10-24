@@ -16,6 +16,7 @@ return {
           "rust_analyzer",
           "basedpyright",
           "ts_ls",
+          "clangd",
         },
       })
 
@@ -76,6 +77,16 @@ return {
             },
           },
         },
+        clangd = {
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=iwyu",
+            "--completion-style=detailed",
+            "--function-arg-placeholders=1",
+          },
+        },
       }
 
       for name, config in pairs(servers) do
@@ -126,6 +137,14 @@ return {
             buffer = event.buf,
             desc = "Próximo diagnóstico",
           })
+
+          local client = vim.lsp.get_client_by_id(event.data.client_id)
+          if client and client.name == "clangd" then
+            vim.keymap.set("n", "<leader>sh", "<cmd>LspClangdSwitchSourceHeader<cr>", {
+              buffer = event.buf,
+              desc = "Alternar entre fonte e header",
+            })
+          end
         end,
       })
     end,
